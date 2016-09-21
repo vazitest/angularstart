@@ -12,7 +12,10 @@ export class Hero {
   <h1>{{title}}</h1>
   <h2>{{hero.name}}详情</h2>
   <div><label>编号:</label>{{hero.id}}</div>
-  <div><label>大名:</label>{{hero.name}}</div>
+  <div>
+    <label>大名:</label>
+    <input value="{{hero.name}}" placeholder="大名">
+  </div>
   `
 })
 export class AppComponent {
