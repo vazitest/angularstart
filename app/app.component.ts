@@ -14,7 +14,7 @@ export class Hero {
   <div><label>编号:</label>{{hero.id}}</div>
   <div>
     <label>大名:</label>
-    <input value="{{hero.name}}" placeholder="大名">
+    <input [(ngModel)] ="hero.name" placeholder="大名">
   </div>
   `
 })
