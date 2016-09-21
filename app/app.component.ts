@@ -8,9 +8,17 @@ export class Hero {
 
 @Component({
   selector: 'my-app',
-  template: '<h1>{{title}}</h1><h2>{{hero}}详情</h2>'
+  template: `
+  <h1>{{title}}</h1>
+  <h2>{{hero.name}}详情</h2>
+  <div><label>编号:</label>{{hero.id}}</div>
+  <div><label>大名:</label>{{hero.name}}</div>
+  `
 })
 export class AppComponent {
   title = '英雄之路';
-  hero = '风之神';
+  hero: Hero = {
+    id: 1,
+    name: '风之神'
+  };
  }
