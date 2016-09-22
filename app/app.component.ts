@@ -1,19 +1,9 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+
 import { Hero } from './hero';
+import { HeroService } from './hero.service';
 
-
-const HEROES: Hero[] = [
-  { id: 11, name: '好好先生' },
-  { id: 12, name: '玉皇大帝' },
-  { id: 13, name: '皇母娘娘' },
-  { id: 14, name: '齐天大圣' },
-  { id: 15, name: '托塔天王' },
-  { id: 16, name: '如来佛祖' },
-  { id: 17, name: '天鹏元帅' },
-  { id: 18, name: '菩提道长' },
-  { id: 19, name: '嫦娥姐姐' },
-  { id: 20, name: '华仔大神' }
-];
 
 @Component({
   selector: 'my-app',
@@ -77,16 +67,28 @@ const HEROES: Hero[] = [
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`]
+`],
+providers: [ HeroService ]
 })
-export class AppComponent {
+
+export class AppComponent implements OnInit {
   title = '英雄之路';
-  heroes = HEROES;
+  heroes : Hero[];
   selectedHero : Hero;
   hero: Hero = {
     id: 1,
     name: '风之神'
   };
+
+  constructor(private heroService: HeroService) {}
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
+
+  getHeroes():void {
+    this.heroService.getHeroes().then(heros => this.heroes = heros);
+  }
 
   onSelect(hero: Hero): void {
       this.selectedHero = hero;
