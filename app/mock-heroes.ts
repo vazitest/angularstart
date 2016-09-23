@@ -8,8 +8,8 @@ export const HEROES: Hero[] = [
   { id: 14, name: '齐天大圣' },
   { id: 15, name: '托塔天王' },
   { id: 16, name: '如来佛祖' },
-  { id: 17, name: '天鹏元帅' },
+  { id: 17, name: '天鹏元帅Mr.Zhu' },
   { id: 18, name: '菩提道长' },
   { id: 19, name: '嫦娥姐姐' },
-  { id: 20, name: '华仔大神' }
+  { id: 20, name: '华仔Vazi大神' }
 ];
