@@ -12,3 +12,10 @@
       </h2>
       <button (click)="gotoDetail()">查看详情</button>
     </div>
+
+    <div>
+      <label>大神名号:</label> <input #heroName/>
+      <button (click)="add(heroName.value); heroName.value=''">
+        添加
+      </button>
+    </div>
