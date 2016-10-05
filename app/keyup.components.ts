@@ -19,3 +19,23 @@ class KeyUpComponent_v1 {
     }
 
 }
+
+@Component({
+    selector: "key-up2",
+    template: `
+        <input #box (keyup) = "onKey(box.value)">
+        <p>{{values}}</p>
+    `
+    
+})
+export /**
+ * KeyUpComponent_v2
+ */
+class KeyUpComponent_v2 {
+    values = "";
+
+    onKey(value: string) {
+        this.values +=  value + ' | ';
+    }
+
+}
