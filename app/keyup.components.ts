@@ -39,3 +39,39 @@ class KeyUpComponent_v2 {
     }
 
 }
+
+@Component({
+    selector: "key-up3",
+    template: `
+        <input #box (keyup.enter) = "values=box.value">
+        <p>{{values}}</p>
+    `
+    
+})
+export /**
+ * KeyUpComponent_v3
+ */
+class KeyUpComponent_v3 {
+    values = "";
+
+
+}
+
+@Component({
+    selector: "key-up4",
+    template: `
+        <input #box 
+        (keyup.enter) = "values=box.value"
+        (blur) = "values=box.value">
+        <p>{{values}}</p>
+    `
+    
+})
+export /**
+ * KeyUpComponent_v3
+ */
+class KeyUpComponent_v4 {
+    values = "";
+
+
+}
