@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
     `
 })
 export class ClickMeComponent {
-    clickMessage = '';
+    clickMessage = '未点击之前';
 
     onClickMe() {
         this.clickMessage = "你是我的大神呀！";

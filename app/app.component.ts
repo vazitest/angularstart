@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Hero } from './hero';
+import { Location } from '@angular/common';
 @Component({
+  moduleId: module.id, //缺少了此ID会导致app.component.html找不到
   selector: 'my-app',
   templateUrl: 'app.component.html'
-
 })
 export class AppComponent {
     title = '英雄之路';
